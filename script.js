@@ -7,8 +7,24 @@ function node() {
 class LinkedList{
 
 
-   find(headNode,wantedNode) {
- 
+append(Head,newNode){
+
+  newNode.nextNode=null;
+this.transverse(Head).nextNode=newNode;
+
+
+
+}
+
+transverse(Head){
+
+  if(Head.nextNode===null){
+
+    return Head
+  }
+console.log(Head)
+  return this.transverse(Head.nextNode)
+
 
 }
 
@@ -32,3 +48,9 @@ Head.value="Head";
 Head.nextNode=secondItem;
 
 
+let extraItem=node()
+extraItem.value="sade";
+
+LinkedListFunctionalities.append(Head,extraItem)
+
+console.log(LinkedListFunctionalities.transverse(Head))
