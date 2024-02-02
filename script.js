@@ -144,6 +144,13 @@ return this.find(value,node.nextNode,length)
   return this.toString(node.nextNode,stringFormat=stringFormat+node.value+" >> ")
 
  }
+
+ removesAt(index){
+
+  let nodeBefore=this.at(index-1)
+  let nodeAfter=this.at(index+1)
+  nodeBefore.nextNode=nodeAfter;
+ }
 }
 
 let LinkedListFunctionalities=new LinkedList();
@@ -151,3 +158,5 @@ let LinkedListFunctionalities=new LinkedList();
 
 
 console.log(LinkedListFunctionalities.toString())
+// LinkedListFunctionalities.removesAt(2)
+console.log(LinkedListFunctionalities.size())
