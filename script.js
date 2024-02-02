@@ -34,6 +34,12 @@ class LinkedList{
 
 append(newNode){
 
+  if(Head===undefined){
+    Head=newNode
+
+    return 
+  }
+
   newNode.nextNode=null;
 this.transverse(Head).nextNode=newNode;
 
@@ -157,6 +163,7 @@ let LinkedListFunctionalities=new LinkedList();
 
 
 
-console.log(LinkedListFunctionalities.toString())
+console.log(LinkedListFunctionalities.pop())
+
 // LinkedListFunctionalities.removesAt(2)
 console.log(LinkedListFunctionalities.size())
